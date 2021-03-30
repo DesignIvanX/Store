@@ -1,0 +1,76 @@
+:root{
+    --one: #222831;
+    --two: #393e46;
+    --trhee: #00adb5;
+    --four: #eeeeee;
+}
+/* Header */
+.nav .nav-content .ul{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: var(--four);
+    clip-path: circle(45px at 110% -5%);
+    -webkit-clip-path: circle(45px at 110% -5%);
+    transition: 1500ms all ease-out;
+    z-index: 100000;
+}
+.nav-content .open{
+    clip-path: circle(900px at 110% -5%) !important;
+    -webkit-clip-path: circle(900px at 110% -5%) !important;
+}
+.burger{
+    display: block;
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    padding: 10px;
+    z-index: 1000000;
+}
+.line1{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--one);
+    transition: 500ms all;
+}
+.line2{
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--one);
+    transition: 500ms all;
+}
+.line3{
+    width: 15px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--one);
+    transition: 500ms all;
+}
+.toggle .line1{
+    transform: rotate(40deg) translateY(11px) translateX(3px);
+}
+.toggle .line2{
+    transform: rotate(-40deg) translateY(0px) translateX(-1px);
+}
+.toggle .line3{
+    transform: rotate(-42deg) translateY(-4.5px) translateX(-1px);
+}
+@media screen and (max-width: 400px){
+    .header .nav .nav-content .logo{
+        padding: 0 0 0 10px;
+        font-size: 1.4rem;
+        font-family: 'Fascinate', cursive;
+    } 
+    .header .nav .content-card-search .content-search{
+        position: relative;
+        width: 130px;
+        height: 28px;
+    }
+}
